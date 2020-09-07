@@ -21,16 +21,16 @@ export default class Auth extends Component {
             <div className="auth">
                 <div className="auth__form">
                     <h3 className="auth__form__brand"><span><img src={notepad} width="30" height="24" alt="Google svg" /> </span> O-notes</h3>
-                    <h1 className="auth__form__greeting">Forget Password?</h1>
+                    <h1 className="auth__form__greeting">Forgot Password?</h1>
                     <small>Enter the email address you used when you joined and we’ll send you instructions to reset your password.</small><br />
             
                     <form><br />
                      <Input type="email" label="Email Address"/><br/>
                     </form>
 
-                    <Button text="Log in" type='primary' size="long"/>
+                    <Button text="Send Reset Instruction" type='primary' size="long"/>
                     <hr/>
-                    <small>Not Registered? <span> <Link to="/register">Sign Up Now</Link> </span> </small>
+                    <small>Not Registered? <span> <Link to="/auth/register">Sign Up Now</Link> </span> </small>
                 </div>
                                 
                 <div className="auth__illustration">

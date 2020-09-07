@@ -31,7 +31,7 @@ export default class Auth extends Component {
                     <br/>
                     <Button text="Sign Up" type='primary' size="long"/>
                     <hr/>
-                    <small>Do you have an account? <span> <Link to="/login">Sign In</Link></span> </small>
+                    <small>Do you have an account? <span> <Link to="/auth/login">Sign In</Link></span> </small>
                 </div>
                 <div className="auth__illustration">
                  <img src={registerSvg} alt="user auth" width="280" height="300"/> 

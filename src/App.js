@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import Login from 'views/Auth/Login'
 import Register from 'views/Auth/Register'
-import ForgetPassword from 'views/Auth/ForgetPassword'
+import ForgotPassword from 'views/Auth/ForgotPassword'
 import Welcome from 'views/Welcome'
 
 function App() {
@@ -12,9 +12,9 @@ function App() {
     <Router>
         <Switch>
           <Route path="/" component={Welcome} exact/>
-          <Route path="/login" component={Login}/>
-          <Route path="/register" component={Register}/>
-          <Route path="/forgetpassword" component={ForgetPassword}/>
+          <Route path="/auth/login" component={Login}/>
+          <Route path="/auth/register" component={Register}/>
+          <Route path="/auth/forgotpassword" component={ForgotPassword}/>
         </Switch>
     </Router>
    

@@ -25,8 +25,8 @@ export default class Auth extends Component {
                     <Button logo={logo} text="Login with Google" size='long'/>
                     <p className='auth__form__or'>or</p>
                     <form>
-                     <Input type="email" label="email address"/><br/>
-                     <Input type="password" label="password"/>
+                     <Input type="email" label="email address"/>
+                     <Input type="password" label="password"/><br/>
                     </form>
                     <div className='auth__questions'>
                         <span className='auth__questions__remember'>
@@ -34,11 +34,11 @@ export default class Auth extends Component {
                             <span>Keep me logged in</span>
                         </span>
                         
-                        <span> <Link to="/forgetpassword">Forgot your password?</Link> </span>
+                        <span> <Link to="/auth/forgotpassword">Forgot password?</Link> </span>
                     </div>
                     <Button text="Log in" type='primary' size="long"/>
                     <hr/>
-                    <small>Don't have an account? <span> <Link to="/register">Sign Up</Link> </span> </small>
+                    <small>Don't have an account? <span> <Link to="/auth/register">Sign Up</Link> </span> </small>
 
                 </div>                
                 <div className="auth__illustration">
