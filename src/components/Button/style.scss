@@ -1,0 +1,34 @@
+@import 'sass-rem';
+@import '../../sass/_variables';
+
+@mixin button_types($bgColor, $border) {
+    color: map-get($light-colors, white);
+    background-color: $bgColor;
+    border: rem(1px) solid $border
+}
+
+.button {
+    border-radius: rem(3px);
+    border: rem(1px) solid map-get($light-colors, alto);
+    height: rem(30px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    &--success {
+        @include button_types(map-get($main-colors, eucalyptus), map-get($main-colors, eucalyptus));
+    }
+
+    &--primary {
+        @include button_types(map-get($main-colors, cornflower-blue), map-get($main-colors, cornflower-blue));
+    }
+
+    &--danger {
+        @include button_types(map-get($main-colors, mexican-red), map-get($main-colors, mexican-red));
+    }
+
+    &--long {
+        width: 100%
+    }
+}

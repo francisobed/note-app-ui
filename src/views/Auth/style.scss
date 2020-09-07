@@ -1,0 +1,69 @@
+@import 'sass-rem';
+@import '../../sass/_variables';
+
+@mixin before_after($property) {
+    content: '';
+    display: block;
+    border-bottom: 1px solid map-get($light-colors, 'alto');
+    width: 50%;
+    position: absolute;
+    #{$property}: 0;
+    top: 50%;
+    width: 45%
+}
+
+.authWrapper {
+    position: relative;
+    height: 100vh;
+}
+
+.auth {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    margin: auto;
+    position: inherit;
+
+    &__form {
+        width: 50%;
+        padding: 2rem;
+
+        &__brand {
+            color: map-get($main-colors, cornflower-blue);
+        }
+
+        &__or {
+            text-align: center;
+            position: relative;
+        }
+
+        &__or:before {
+            @include before_after(left);
+        }
+
+        &__or:after {
+            @include before_after(right);
+        }
+    }
+
+    &__illustration {
+        padding: 2rem;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: map-get($light-colors, link-water);
+    }
+
+    &__questions {
+        display: flex;
+        font-size: rem(12px);
+        justify-content: space-between;
+        align-items: center;
+
+        &__remember {
+            display: flex;
+            align-items: center;
+        }
+    }
+}
